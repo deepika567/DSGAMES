@@ -2,7 +2,7 @@ function init(){
     canvas = document.getElementById('mycanvas');
 	W = H = canvas.width = canvas.height = 1000;
 	pen = canvas.getContext('2d');
-    cs=50;
+    cs=66;
 
     snake = {
 		init_len:5,
@@ -35,6 +35,8 @@ function update(){
 
 }
 function gameloop(){
+    draw();
+    update();
 
 }
 init();

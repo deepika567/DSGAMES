@@ -1,8 +1,9 @@
 function init(){
-    var canvas=document.getElementById('mycanvas');
-    W=H=canvas.width=canvas.height=1000;
+     canvas=document.getElementById('mycanvas');
+    W= H= canvas.width=canvas.height=1000;
     pen=canvas.getcontext('2d');
     cs=50;
+
     snake={
         init_len=5,
         color:"blue",
@@ -17,15 +18,18 @@ function init(){
 
         },
         drawSnake:function(){
-            pen.fillRect(this.cells[i],x,cells[i],y,cs,cs);
+            pen.fillRect(this.cells[i].x,this.cells[i].y,cs,cs);
 
         }
+       
 
 
     };
+    snake.createSnake();
 
 }
 function draw(){
+    snake.drawSnake();
 
 }
 function update(){
